@@ -176,7 +176,7 @@ public class MainHook implements IXposedHookLoadPackage {
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         filter.addAction(Intent.ACTION_DATE_CHANGED);
-        filter.addAction(Intent.ACTION_USER_SWITCHED);
+        filter.addAction("android.intent.action.USER_SWITCHED");
 
         BroadcastReceiver receiver = new BroadcastReceiver() {
             @Override
