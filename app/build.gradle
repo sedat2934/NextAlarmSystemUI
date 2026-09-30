@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.sedat.nextalarmsystemui'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.sedat.nextalarmsystemui'
+        minSdk 31
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    packaging {
+        resources {
+            excludes += ['/META-INF/AL2.0', '/META-INF/LGPL2.1']
+        }
+    }
+}
+
+dependencies {
+    compileOnly 'de.robv.android.xposed:api:82'
+}
